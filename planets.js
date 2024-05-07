@@ -7,11 +7,13 @@ let terrainSpan;
 let gravitySpan;
 let orbitalPeriodSpan;
 let populationSpan;
+let characterUl;
+let filmsUl;
 let filmsDiv;
 let residentsDiv;
 const baseUrl = `https://swapi2.azurewebsites.net/api`;
 
-// Runs on page load
+// Runs on page l;oad
 addEventListener('DOMContentLoaded', () => {
   nameH1 = document.querySelector('h1#name');
   climateSpan = document.querySelector('span#climate');
@@ -23,7 +25,7 @@ addEventListener('DOMContentLoaded', () => {
   orbitalPeriodSpan = document.querySelector('span#orbital_period');
   populationSpan = document.querySelector('span#population');
 
-  characterUl = document.querySelector('#characters>ul')
+  characterUl = document.querySelector('#characters>ul');
   filmsUl = document.querySelector('#films>ul');
   const sp = new URLSearchParams(window.location.search)
   const id = sp.get('id')
