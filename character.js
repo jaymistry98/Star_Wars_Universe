@@ -59,6 +59,8 @@ const renderCharacter = character => {
   massSpan.textContent = character?.mass;
   birthYearSpan.textContent = character?.birth_year;
   homeworldSpan.innerHTML = `<a href="/planet.html?id=${character?.homeworld.id}">${character?.homeworld.name}</a>`;
-  const filmsLis = character?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
+  const filmsLis = character?.films?.map(film => `<li><a href="/films.html?id=${film.id}">${film.title}</li>`)
   filmsUl.innerHTML = filmsLis.join("");
+  filmsUl.addEventListener('click', function(){goToFilmsPage(films.id) });
 }
+const goToFilmsPage = id => window.location = `/films.html?id=${id}`
